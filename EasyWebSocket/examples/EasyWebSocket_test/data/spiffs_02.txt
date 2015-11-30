@@ -1,0 +1,4 @@
+, user-scalable=yes'>
+      <title>WebSocket Test</title>
+      <script language='javascript' type='text/javascript'>
+        var wsUri = 'ws://

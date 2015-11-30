@@ -1,0 +1,33 @@
+){
+             websocket.send(str);
+             ms = new Date();
+          }
+        }
+
+        function WS_close(){
+          websocket.close();
+          websocket = null;
+        }
+
+        function writeToScreen(message){
+          var msg = document.getElementById('msg');
+          msg.innerHTML = message;
+        }
+
+        window.onload = function(){
+          setTimeout('init()', 1000);
+        }
+
+        function OnOffBt(th, iid){
+          if (th.value == 'OFF'){
+            th.value = 'ON';
+            doSend(100,iid);
+          } else {
+            th.value = 'OFF';
+            doSend(0,iid);
+          }
+        }
+
+      </script>
+    </head>
+  

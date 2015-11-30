@@ -1,0 +1,56 @@
+';
+        var output;
+        var websocket = null;
+        var ms;
+        function init(){
+          ms = new Date();
+          output = document.getElementById('output');
+          testWebSocket();
+        }
+
+        function testWebSocket(){      
+          if(websocket == null){
+            websocket = new WebSocket(wsUri);
+            websocket.onopen = function(evt) { onOpen(evt) };
+            websocket.onclose = function(evt) { onClose(evt) };
+            websocket.onmessage = function(evt) { onMessage(evt) };
+            websocket.onerror = function(evt) { onError(evt) };
+          }
+        }
+
+        function onOpen(evt){
+          writeToScreen('CONNECTED');
+          doSend('WebSocket rocks');
+        }
+
+        function onClose(evt){
+          writeToScreen('WS.Close.DisConnected');
+          websocket.close();
+          websocket = null;
+        }
+
+        function onMessage(evt){
+          var rev = evt.data;
+          var rev_str = rev.split('|');
+          var split_str1 = rev_str[0];
+          var split_strID = rev_str[1];
+          var ms1 = document.getElementById(split_strID);
+          ms1.innerHTML = split_str1;
+        }
+
+        function onError(evt){
+          writeToScreen("<span style='color: red;'>ERROR:</span> " + evt.data);
+        }
+
+        function doSend(data, c){
+          var str_data;
+          if(data==100){
+            str_data = String(data);
+          }else if(data>=10){
+            str_data = '0' + String(data);
+          }else if(data<10){
+            str_data = '00' + String(data);
+          }
+          var str = str_data + '|' + c + ';';
+          var mms = new Date();
+          if(mms-ms >
