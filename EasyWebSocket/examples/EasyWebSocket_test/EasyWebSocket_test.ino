@@ -17,7 +17,6 @@ String ret_str;
 String view_scale = "1.1";
 
 byte s_rate = 10;
-int port = 80;
 int PingSendTime = 3000;
 
 #define ledPin1 12
