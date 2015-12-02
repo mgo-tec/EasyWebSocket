@@ -105,8 +105,6 @@ void loop() {
     }
   }else if(ret_str == "_close"){
     delay(100);
-    char res_html[html_str.length()+1];
-    html_str.toCharArray(res_html, html_str.length());
     ews.EWS_HandShake(LocalIPaddress, view_scale, s_rate, html_str);
     CountTestTime = millis();
     ret_str = String('\0');
