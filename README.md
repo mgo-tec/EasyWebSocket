@@ -16,7 +16,11 @@ https://github.com/esp8266/arduino-esp8266fs-plugin
 Other usage is Japanese, please visit my blog.
 
 My Blog: 
+
 https://www.mgo-tec.com/blog-entry-ws_lib01.html
+
 https://www.mgo-tec.com/blog-entry-ws_lib02.html
 
-Movie: https://www.youtube.com/watch?v=xC1Q0tVHcYQ
+Movie: 
+
+https://www.youtube.com/watch?v=xC1Q0tVHcYQ
