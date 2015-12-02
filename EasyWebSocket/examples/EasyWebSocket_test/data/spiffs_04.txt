@@ -6,7 +6,6 @@
 
         function WS_close(){
           websocket.close();
-          websocket = null;
         }
 
         function writeToScreen(message){

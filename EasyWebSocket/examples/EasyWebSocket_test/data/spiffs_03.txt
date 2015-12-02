@@ -26,7 +26,6 @@
         function onClose(evt){
           writeToScreen('WS.Close.DisConnected');
           websocket.close();
-          websocket = null;
         }
 
         function onMessage(evt){
